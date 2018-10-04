@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Mydate = function (day, month, year) {
+        this.day=day;
+        this.month=month;
+        this.year=year;
+        this.getDay=function () {
+            return this.day;
+        };
+        this.getMonth=function () {
+            return this.month;
+        };
+        this.getYear=function () {
+            return this.year;
+        };
+        this.setDay=function (day) {
+            this.day=day;
+        };
+        this.setMonth=function (month) {
+            this.month=month;
+        };
+        this.setYear=function (year) {
+            this.year=year;
+        };
+        this.setDate=function (day,month,year) {
+            this.day=day;
+            this.month=month;
+            this.year=year;
+        };
+        this.toString=function (day, month, year) {
+            this.day=day;
+            this.month=month;
+            this.year=year;
+        }
+    };
+    var date = new Mydate(2,2,2017);
+    var day=date.getDay();
+    var month=date.getMonth();
+    var year=date.getYear();
+    alert(day + "/" + month + "/" + year);
+    date.setDay(10);
+    var nextEightDay=date.getDay();
+    alert(nextEightDay + "/" + month + "/" + year);
+    date.setDate(4,10,2018);
+    var realDay=date.getDay();
+    var realMonth=date.getMonth();
+    var realYear=date.getYear();
+    alert(realDay + "/" + realMonth + "/" + realYear);
+    date.toString('dd','mm','yyy');
+    var defaulDay=date.getDay();
+    var defaulMonth=date.getMonth();
+    var defaulYear=date.getYear();
+    alert(defaulDay + "/" + defaulMonth + "/" + defaulYear);
+</script>
+</body>
+</html>
